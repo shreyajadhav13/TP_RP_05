@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body style="margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: 
+            center; background: linear-gradient(45deg, white, #3a4452);">
+            
+    <div class="container">
+        <div class="calculator" style="border:2px solid black; padding: 20px;box-sizing: border-box; border-radius: 16px; background: transparent; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);">
+            <input type="text" id="inputBox" placeholder="0" style="width: 277px; border: none; box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1); padding: 24px; margin: 10px; background: black; font-size: 40px; text-align: right; color: white;">
+            <div>
+                <button class="button operator" onclick="clearInput()" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: red;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">AC</button>
+                <button class="button operator" onclick="deleteLast()" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: red;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); ">DEL</button>
+                <button class="button operator" onclick="Input('%')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: darkgreen;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">%</button>
+                <button class="button operator" onclick="Input('/')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: darkgreen;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">/</button>
+            </div>
+            <div>
+                <button class="button" onclick="Input('7')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">7</button>
+                <button class="button"onclick="Input('8')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);background: transparent; color: black; font-size: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); ">8</button>
+                <button class="button" onclick="Input('9')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">9</button>
+                <button class="button operator" onclick="Input('*')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: darkgreen; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); ">*</button>
+            </div>
+            <div>
+                <button class="button" onclick="Input('4')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">4</button>
+                <button class="button" onclick="Input('5')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">5</button>
+                <button class="button" onclick="Input('6')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">6</button>
+                <button class="button operator" onclick="Input('-')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: darkgreen;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">-</button>
+            </div>
+            <div>
+                <button class="button" onclick="Input('1')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">1</button>
+                <button class="button" onclick="Input('2')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">2</button>
+                <button class="button" onclick="Input('3')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">3</button>
+                <button class="button operator" onclick="Input('+')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: darkgreen;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">+</button>
+            </div>
+            <div>
+                <button class="button" onclick="Input('00')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); ">00</button>
+                <button class="button" onclick="Input('0')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">0</button>
+                <button class="button" onclick="Input('.')" style="border: none; width: 60px; height: 60px; margin: 10px; border-radius: 50%;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); background: transparent; color: black; font-size: 25px;color: darkgreen;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">.</button>
+                
+            <div>
+                <button class="button equalBtn" onclick="calculate()" style="border: none; width: 310px; height: 60px;box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); margin: 10px; background-color: #fb7c14; color: black; font-size: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); ">=</button>
+            </div>
+    </div>
+
+    <script>
+        function Input(value) {
+            document.getElementById('inputBox').value += value;
+        }
+
+        function clearInput() {
+            document.getElementById('inputBox').value = '';
+        }
+
+        function deleteLast() {
+            let currentValue = document.getElementById('inputBox').value;
+            document.getElementById('inputBox').value = currentValue.slice(0, -1);
+        }
+
+        function calculate() {
+            let expression = document.getElementById('inputBox').value;
+            let result = eval(expression);
+            document.getElementById('inputBox').value = result;
+        }
+    </script>
+</body>
+</html>
