@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e0e0e0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: #333;
+        color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      input {
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        width: calc(100% - 120px);
+        margin-right: 10px;
+      }
+      button {
+        padding: 12px;
+        border: none;
+        background-color: #28a745;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      ol {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+      li {
+        list-style: none;
+        background-color: #444;
+        color: #fff;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .complete-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      .complete-button:hover {
+        background-color: #c82333;
+      }
+      .btn1 {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 12px;
+        cursor: pointer;
+        position: relative;
+    bottom: 52px;
+    left: 89px;
+      }
+      .btn1:hover {
+        background-color: #c82333;
+      }
+      .btn2 {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 12px;
+        cursor: pointer;
+    position: relative;
+    bottom: 52px;
+    left: 96px;
+      }
+      .btn2:hover {
+        background-color: #f04b4b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TODO</h1>
+      <div>
+        <input id="task" placeholder="Enter a new task..." />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <div id="taskList"></div>
+    </div>
+    <script>
+      var count = 0;
+      function addTask() {
+        var list = "list" + count++;
+        var task = document.getElementById("task").value;
+        var taskList = document.getElementById("taskList");
+        var taskItem = document.createElement("div");
+        taskItem.innerHTML = `
+          <li id="${list}"">${task}</li>
+          <button class="btn1" onclick="completeTask('${list}')">Complete</button>
+          <button class="btn2" onclick="remove('${list}')">Remove</button>
+        `;
+        taskList.appendChild(taskItem);
+      }
+
+      function completeTask(list) {
+        var task1 = document.getElementById(list);
+        task1.style.textDecoration = "line-through";
+      }
+
+      function remove(list) {
+        var listItem = document.getElementById(list); // Get the list item by its id
+        listItem.parentNode.remove(); // Remove the parent element (which contains the list item and buttons)
+      }
+    </script>
+  </body>
+</html>
