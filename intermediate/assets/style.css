@@ -1,0 +1,21 @@
+/* Global Selector */
+*{
+    /* CSS Resetting */
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1,label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*  Id Selector */
+#login{
+    color: blue;
+}
+
+/*  Class Selector */
+.form-input{
+    padding: 10px 20px;
+}
