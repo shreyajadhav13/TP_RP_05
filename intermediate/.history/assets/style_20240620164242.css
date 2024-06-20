@@ -30,10 +30,6 @@ form{
     
     
 }
-
-.main{
-    color:white
-}
 /*  Class Selector */
 .form-input{
     margin: 40px 0px 0px 0px;
@@ -50,7 +46,7 @@ button:hover {
 .nav{
     display: flex;
     justify-content: space-between;
-    background-color:red
+    background-color:green
 }
 .nav > div {
     padding:15px;
@@ -63,8 +59,6 @@ button:hover {
 .nav > div > ul > li:hover {
     text-decoration: underline;
     cursor: pointer;
-    font-size: 20px;
-    color:yellow
 }
 
 /* End Navbar */

@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    list-style: none;
 }
 
 h1,label{
@@ -30,10 +29,6 @@ form{
     
     
 }
-
-.main{
-    color:white
-}
 /*  Class Selector */
 .form-input{
     margin: 40px 0px 0px 0px;
@@ -50,21 +45,15 @@ button:hover {
 .nav{
     display: flex;
     justify-content: space-between;
-    background-color:red
 }
 .nav > div {
     padding:15px;
 }
 
-.nav > div > ul {
+.nav > div > ul{
     display:flex;
-    gap:40px;
+    gap:35px;
 }
-.nav > div > ul > li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 20px;
-    color:yellow
-}
+
 
 /* End Navbar */

@@ -3,9 +3,22 @@
     /* CSS Resetting */
     margin: 0;
     padding: 0;
+    text-align: center;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    list-style: none;
+    margin-top: 24px;
+    color:white
+}
+/* Login */
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+   justify-content: center;
+   align-items: center;
+   background-image: url(https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+
 }
 
 h1,label{
@@ -30,10 +43,6 @@ form{
     
     
 }
-
-.main{
-    color:white
-}
 /*  Class Selector */
 .form-input{
     margin: 40px 0px 0px 0px;
@@ -47,24 +56,7 @@ button:hover {
 
 /* Navbar */
 
-.nav{
-    display: flex;
-    justify-content: space-between;
-    background-color:red
-}
-.nav > div {
-    padding:15px;
-}
 
-.nav > div > ul {
-    display:flex;
-    gap:40px;
-}
-.nav > div > ul > li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 20px;
-    color:yellow
-}
+
 
 /* End Navbar */
