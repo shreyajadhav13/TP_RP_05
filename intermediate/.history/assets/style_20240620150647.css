@@ -23,11 +23,6 @@ h1,label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.button{
-    border-color: black;
-    padding: 3px 4px 1px 5px;
-}
-
 /*  Id Selector */
 #login{
     color: white; 
@@ -39,7 +34,6 @@ form{
     border-radius: 8px;
     background-color:rgba(255, 255, 255, 0.322)
     
-    
 }
 /*  Class Selector */
 .form-input{
@@ -48,5 +42,5 @@ form{
 
 button:hover {
     opacity: 0.8;
-   
-}
+    border:1px solid black
+  }

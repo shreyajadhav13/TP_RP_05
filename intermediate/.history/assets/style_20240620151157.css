@@ -23,9 +23,8 @@ h1,label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.button{
+button{
     border-color: black;
-    padding: 3px 4px 1px 5px;
 }
 
 /*  Id Selector */

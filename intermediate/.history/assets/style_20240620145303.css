@@ -5,7 +5,7 @@
     padding: 0;
     text-align: center;
     box-sizing: border-box;
-    margin-top: 24px;
+    margin-top: 51px;
 }
 body{
     display: flex;
@@ -23,30 +23,20 @@ h1,label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.button{
-    border-color: black;
-    padding: 3px 4px 1px 5px;
-}
-
 /*  Id Selector */
 #login{
-    color: white; 
+    color: blue; 
 }
 form{
-    height: 300px;
-    width: 300px;
-    border: 2px ;
-    border-radius: 8px;
-    background-color:rgba(255, 255, 255, 0.322)
-    
-    
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
 }
 /*  Class Selector */
 .form-input{
-    margin: 40px 0px 0px 0px;
+    margin: 62px 0px 0px 0px;
 }
 
 button:hover {
     opacity: 0.8;
-   
-}
+  }
