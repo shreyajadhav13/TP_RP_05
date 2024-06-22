@@ -21,7 +21,7 @@ h1,label{
 #login{
     color: white; 
 }
-form{
+/* form{ 
     height: 300px;
     width: 300px;
     border: 2px ;
@@ -29,7 +29,7 @@ form{
     background-color:rgba(255, 255, 255, 0.322)
     
     
-}
+ } */
 
 .main{
     color:white
@@ -41,7 +41,6 @@ form{
 
 button:hover {
     opacity: 0.8;
-   
 }
 /* End Login */
 
@@ -64,7 +63,36 @@ button:hover {
     text-decoration: underline;
     cursor: pointer;
     font-size: 20px;
-    color:yellow
+    color:white
 }
 
 /* End Navbar */
+
+
+/* Main */
+input{
+    padding: 2px 31px 0px 22px;
+    margin-left: -169px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 93px;
+    font-size: 25px;
+}
+
+.img {
+    height: 256px;
+    width: 514px;
+    margin-left: 86px;
+}
+form{
+    margin-top: 109px;
+    display: flex;
+    justify-content: center;
+    gap: 190px;
+    font-size: 25px;
+}
+/* End Main */
+
