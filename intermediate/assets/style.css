@@ -1,3 +1,8 @@
+:root{
+    --primary : rgb(204, 94, 94);
+}
+
+
 /* Global Selector */
 *{
     /* CSS Resetting */
@@ -49,7 +54,7 @@ button:hover {
 .nav{
     display: flex;
     justify-content: space-between;
-    background-color:red
+    background-color:var(--primary);
 }
 .nav > div {
     padding:15px;
